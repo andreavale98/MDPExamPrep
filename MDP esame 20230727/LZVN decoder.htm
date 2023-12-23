@@ -1,0 +1,1494 @@
+<!DOCTYPE html>
+<html lang="it"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="LZVN%20decoder_files/google-analytics_analytics.js"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'G-JHGNYN9YCB');
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="LZVN%20decoder_files/themes.css">
+    <link rel="shortcut icon" href="https://olj.ing.unimore.it/static/oljApp/imgs/olj_logo_squared.png">
+    <link rel="stylesheet" href="LZVN%20decoder_files/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="LZVN%20decoder_files/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="LZVN%20decoder_files/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><script src="LZVN%20decoder_files/page-script.js"></script>
+    <script src="LZVN%20decoder_files/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="LZVN%20decoder_files/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    
+    
+    <link rel="stylesheet" href="LZVN%20decoder_files/editormd.preview.css">
+    
+    
+    <link type="text/css" rel="stylesheet" href="LZVN%20decoder_files/katex.min.css">
+    <script id="-cdnjs-cloudflare-com-ajax-libs-KaTeX-0-11-1-katex-min" type="text/javascript" src="LZVN%20decoder_files/katex.min.js"></script>
+
+
+    <title> LZVN decoder </title>
+    
+    <script>
+        // Script to set/check cookies for "storing" user choices on alerts
+        function showWhenRequired(id) {
+            if (display(id)) {
+                $("#" + id).show()
+            }
+        }
+
+        function setCookie(cname, cvalue) {
+            let exdate = new Date();
+            exdate.setDate(exdate.getDate() + 5);
+            document.cookie = cname + "=" + cvalue + "; expires=" + exdate.toUTCString() + ";path=/; SameSite=None; Secure";
+        }
+
+        function getCookie(cname) {
+            var name = cname + "=";
+            var ca = document.cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+
+        function display(cname) {
+            var display = getCookie(cname);
+            return (display === null || display === ""); // If null we have to display the alert
+        }
+    </script>
+</head>
+
+<body class="light-theme" style="padding-top: 90px; padding-bottom: 60px;">
+<div class="container">
+    
+
+
+
+<nav id="navbar" class="navbar navbar-expand-lg navbar-light fixed-top">
+    <div class="container">
+        <div class="navbar-brand">
+            <a href="https://olj.ing.unimore.it/">
+                <img src="LZVN%20decoder_files/olj_logo.png" alt="olj" style="max-height:50px;"></a>
+        </div>
+
+        <a class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                
+                <a class="nav-link active" href="https://olj.ing.unimore.it/course/3"> Multimedia Data Processing </a> 
+                
+                    <li class="nav-item dropdown">
+                        <a class="dropdown-toggle nav-link" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Insegnamenti
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            
+                                <a class="dropdown-item" href="https://olj.ing.unimore.it/course/3">Multimedia Data Processing</a>
+                            
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="https://olj.ing.unimore.it/">Tutti gli Insegnamenti</a>
+                        </div>
+                    </li>
+                
+                
+                    <a class="nav-link" href="https://olj.ing.unimore.it/quiz/course/3">Quiz <span class="sr-only">(current)</span></a>
+
+
+
+            </ul>
+            <ul class="navbar-nav ml-auto">
+
+                
+                
+                
+                <!--Available Languages [(&#x27;en&#x27;, &#x27;Inglese&#x27;), (&#x27;it&#x27;, &#x27;Italiano&#x27;)] -->
+                <li class="nav-item dropdown show">
+                    <a class="nav-link" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img width="15px" src="LZVN%20decoder_files/it.png">
+                        &nbsp; <span class="caret"></span></a>
+                    <div id="language-list" class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        
+                            <a class="dropdown-item" href="https://olj.ing.unimore.it/i18n/setlang/" data-language-code="en">
+                                <img width="15px" src="LZVN%20decoder_files/en.png">
+                                Inglese
+                                &nbsp;&nbsp;
+                            </a>
+                        
+                            <a class="dropdown-item" href="https://olj.ing.unimore.it/i18n/setlang/" data-language-code="it">
+                                <img width="15px" src="LZVN%20decoder_files/it.png">
+                                Italiano
+                                ✓
+                            </a>
+                        
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown show">
+                    
+                        <a class="dropdown-toggle nav-link" href="https://olj.ing.unimore.it/profile/" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user" aria-hidden="true"></i> Andrea Valerio
+                            
+                                (243240)
+                            
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item" href="https://olj.ing.unimore.it/profile/">Profilo</a>
+                            <a class="dropdown-item" href="https://olj.ing.unimore.it/accounts/logout/">Logout</a>
+                        </div>
+                    
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<style>
+    #navbar {
+        font-size: large;
+        background-color: #ECECEC;
+    }
+</style>
+    <div class="extend row justify-content-center">
+        <div class="col-12">
+            
+                <h1 class="mt-2"> LZVN decoder
+    <a type="button" href="https://olj.ing.unimore.it/exercise/submit/1342/exam/507/" class="btn btn-success float-right mr-1"><i class="fa fa-upload" aria-hidden="true"></i>
+        Submit Solution</a>
+    
+</h1>
+                <hr class="mt-0 mb-4">
+            
+            
+            
+    <div id="test-editormd-view" class="markdown-body editormd-html-preview">
+        <p>Write a C++ command line program that accepts the following options:</p>
+<pre class="prettyprint linenums prettyprinted" style=""><ol class="linenums"><li class="L0"><code><span class="pln">lzvn_decode </span><span class="pun">&lt;</span><span class="pln">input file</span><span class="pun">&gt;</span><span class="pln"> </span><span class="pun">&lt;</span><span class="pln">output file</span><span class="pun">&gt;</span></code></li></ol></pre><p>The program must manage the command line, load a stream compressed with the LZVN algorithm and decode it in the output file.</p>
+<p>LZVN is an open-source lossless data compression algorithm created by
+ Apple Inc. It was released together with a more complex algorithm 
+called LZFSE (Lempel–Ziv Finite State Entropy). LZFSE was introduced by 
+Apple at its Worldwide Developer Conference 2015. It shipped with that 
+year's iOS 9 and OS X 10.11 releases.</p>
+<p>The general Apple compressed stream is divided into blocks, each with
+ different compression algorithms. The list of possible blocks is:</p>
+<table>
+<thead>
+<tr>
+<th>magic number</th>
+<th>block type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>bvx-</code></td>
+<td>uncompressed</td>
+</tr>
+<tr>
+<td><code>bvxn</code></td>
+<td>LZVN compressed</td>
+</tr>
+<tr>
+<td><code>bvx1</code></td>
+<td>LZFSE compressed, uncompressed tables</td>
+</tr>
+<tr>
+<td><code>bvx2</code></td>
+<td>LZFSE compressed, compressed tables</td>
+</tr>
+<tr>
+<td><code>bvx$</code></td>
+<td>end of stream</td>
+</tr>
+</tbody>
+</table>
+<p>In this exercise, only LZVN and end of stream will be used. After the <code>bvxn</code>
+ header a 32 bits integer (little endian) provides the number of bytes 
+that the output will require, followed by another 32 bits integer 
+(little endian) which contains the block size, that is the number of 
+encoded (source) bytes. </p>
+<p>The LZVN stream is made up of commands (<em>opcodes</em> in Apple 
+sources) which have a 1-byte size, possibly followed by more bytes. In 
+general, every opcode instructs the decoder to first add some bytes 
+(literals) to the output stream and then to go back in the already 
+decoded stream of a certain <em>match distance</em> and append <em>match length</em>
+ bytes to the decoded stream. Every opcode differs in the number of bits
+ dedicated to every part (which could be even 0 bits, meaning that the 
+literals or the distance/match information are missing).</p>
+<p>The complete list of opcodes is provided in the following tables. 
+Every letter (L, M, D) or number (0, 1) is one bit. Every value is 
+encoded as a binary number from the most significant bit to the least 
+significant bit.</p>
+<table>
+<thead>
+<tr>
+<th>opcode type</th>
+<th>format</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>small distance (sml_d)</td>
+<td><code>LLMMMDDD DDDDDDDD LITERALS</code></td>
+<td>1) the length of the literal part (0-3 bytes) is encoded by the high 2 bits of the first byte.<br>2) the match length is encoded with a bias of +3 in the next 3 bits (3-10 bytes).<br>3) the match distance is encoded in the following 3+8 bits, but the first 3 bits cannot be <code>110</code> or <code>111</code>, so the effective range is 0-1535. </td>
+</tr>
+<tr>
+<td>medium distance (med_d)</td>
+<td><code>101LLMMM DDDDDDMM DDDDDDDD LITERALS</code></td>
+<td>1) the length of the literal part (0-3 bytes) is encoded by 2 bits of the first byte.<br>2)
+ the match length is encoded with a bias of +3 in the next 3 bits (msb) 
+and in two bits (lsb) of the following byte (3-34 bytes).<br>3) the match distance is encoded in the following 8+6 bits (0-16383). <strong>Notice that the last 8 bits are strangely the most significant part</strong>.</td>
+</tr>
+<tr>
+<td>large distance (lrg_d)</td>
+<td><code>LLMMM111 DDDDDDDD DDDDDDDD LITERALS</code></td>
+<td>1) the length of the literal part (0-3 bytes) is encoded by the high 2 bits of the first byte.<br>2) the match length is encoded with a bias of +3 in the next 3 bits (3-10 bytes).<br>3) the match distance is encoded in the following 8+8 bits (0-65535). <strong>Notice that the last 8 bits are strangely the most significant part</strong></td>
+</tr>
+<tr>
+<td>previous distance (pre_d)</td>
+<td><code>LLMMM110 LITERALS</code></td>
+<td>1) the length of the literal part (0-3 bytes) is encoded by the high 2 bits of the first byte.<br>2) the match length is encoded with a bias of +3 in the next 3 bits (3-10 bytes).<br>3) the match distance is <strong>not encoded</strong>. It uses the last distance set.</td>
+</tr>
+<tr>
+<td>small match (sml_m)</td>
+<td><code>1111MMMM</code></td>
+<td>1) there are no literals<br>2) the match length is encoded without bias in 4 bits (0-15 bytes).<br>3) the match distance is <strong>not encoded</strong>. It uses the last distance set.</td>
+</tr>
+<tr>
+<td>large match (lrg_m)</td>
+<td><code>11110000 MMMMMMMM</code></td>
+<td>1) there are no literals<br>2) the match length is encoded with a bias of +16 in 8 bits (16-271 bytes).<br>3) the match distance is <strong>not encoded</strong>. It uses the last distance set.</td>
+</tr>
+<tr>
+<td>small literal (sml_l)</td>
+<td><code>1110LLLL LITERALS</code></td>
+<td>1) the length of the literal part (0-15 bytes) is encoded by the low 4 bits of the first byte.<br>2) there is no copy, so no match length or distance is encoded. This opcode doesn't change the "previous" distance value.</td>
+</tr>
+<tr>
+<td>large literal (lrg_l)</td>
+<td><code>11100000 LLLLLLLL LITERALS</code></td>
+<td>1) the length of the literal part is encoded with a bias of +16 by the 8 bits of the second byte (16-271 bytes).<br>2) there is no copy, so no match length or distance is encoded. This opcode doesn't change the "previous" distance value.</td>
+</tr>
+<tr>
+<td>nop</td>
+<td><code>00001110</code></td>
+<td>do nothing</td>
+</tr>
+<tr>
+<td>nop</td>
+<td><code>00010110</code></td>
+<td>do nothing</td>
+</tr>
+<tr>
+<td>eos</td>
+<td><code>00000110 00000000 00000000 00000000 00000000 00000000 00000000 00000000</code></td>
+<td>end of the stream</td>
+</tr>
+<tr>
+<td>udef</td>
+<td><code>0111xxxx</code></td>
+<td>should never happen</td>
+</tr>
+<tr>
+<td>udef</td>
+<td><code>1101xxxx</code></td>
+<td>should never happen</td>
+</tr>
+<tr>
+<td>udef</td>
+<td><code>00011110</code></td>
+<td>should never happen</td>
+</tr>
+<tr>
+<td>udef</td>
+<td><code>00100110</code></td>
+<td>should never happen</td>
+</tr>
+<tr>
+<td>udef</td>
+<td><code>00101110</code></td>
+<td>should never happen</td>
+</tr>
+<tr>
+<td>udef</td>
+<td><code>00110110</code></td>
+<td>should never happen</td>
+</tr>
+<tr>
+<td>udef</td>
+<td><code>00111110</code></td>
+<td>should never happen</td>
+</tr>
+</tbody>
+</table>
+<h2 id="h2-important-note"><a name="IMPORTANT NOTE" class="reference-link"></a><span class="header-link octicon octicon-link"></span>IMPORTANT NOTE</h2><p>The
+ decoding of the first byte univocally determines the opcode type, and 
+in the original Apple code, it is realized with a lookup table. 
+Unfortunately, the patterns are not mutually exclusive (<em>a bad design in my opinion</em>).
+ If you want to decode the first byte without building a table, first 
+detect the fully specified patterns (8 explicit bits), then the 
+partially specified ones (4 explicit bits), then medium distance, then 
+large and previous distance, and finally small distance. </p>
+<p>For your convenience during debugging, the following table lists all bytes and the associated opcodes:</p>
+<table>
+<thead>
+<tr>
+<th>byte</th>
+<th>opcode</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>00000000</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>00000001</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>00000010</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>00000011</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>00000100</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>00000101</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>00000110</td>
+<td>eos</td>
+</tr>
+<tr>
+<td>00000111</td>
+<td>lrg_d</td>
+</tr>
+<tr>
+<td>00001000</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>00001001</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>00001010</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>00001011</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>00001100</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>00001101</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>00001110</td>
+<td>nop</td>
+</tr>
+<tr>
+<td>00001111</td>
+<td>lrg_d</td>
+</tr>
+<tr>
+<td>00010000</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>00010001</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>00010010</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>00010011</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>00010100</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>00010101</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>00010110</td>
+<td>nop</td>
+</tr>
+<tr>
+<td>00010111</td>
+<td>lrg_d</td>
+</tr>
+<tr>
+<td>00011000</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>00011001</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>00011010</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>00011011</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>00011100</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>00011101</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>00011110</td>
+<td>udef</td>
+</tr>
+<tr>
+<td>00011111</td>
+<td>lrg_d</td>
+</tr>
+<tr>
+<td>00100000</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>00100001</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>00100010</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>00100011</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>00100100</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>00100101</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>00100110</td>
+<td>udef</td>
+</tr>
+<tr>
+<td>00100111</td>
+<td>lrg_d</td>
+</tr>
+<tr>
+<td>00101000</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>00101001</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>00101010</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>00101011</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>00101100</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>00101101</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>00101110</td>
+<td>udef</td>
+</tr>
+<tr>
+<td>00101111</td>
+<td>lrg_d</td>
+</tr>
+<tr>
+<td>00110000</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>00110001</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>00110010</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>00110011</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>00110100</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>00110101</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>00110110</td>
+<td>udef</td>
+</tr>
+<tr>
+<td>00110111</td>
+<td>lrg_d</td>
+</tr>
+<tr>
+<td>00111000</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>00111001</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>00111010</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>00111011</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>00111100</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>00111101</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>00111110</td>
+<td>udef</td>
+</tr>
+<tr>
+<td>00111111</td>
+<td>lrg_d</td>
+</tr>
+<tr>
+<td>01000000</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>01000001</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>01000010</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>01000011</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>01000100</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>01000101</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>01000110</td>
+<td>pre_d</td>
+</tr>
+<tr>
+<td>01000111</td>
+<td>lrg_d</td>
+</tr>
+<tr>
+<td>01001000</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>01001001</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>01001010</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>01001011</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>01001100</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>01001101</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>01001110</td>
+<td>pre_d</td>
+</tr>
+<tr>
+<td>01001111</td>
+<td>lrg_d</td>
+</tr>
+<tr>
+<td>01010000</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>01010001</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>01010010</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>01010011</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>01010100</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>01010101</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>01010110</td>
+<td>pre_d</td>
+</tr>
+<tr>
+<td>01010111</td>
+<td>lrg_d</td>
+</tr>
+<tr>
+<td>01011000</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>01011001</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>01011010</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>01011011</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>01011100</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>01011101</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>01011110</td>
+<td>pre_d</td>
+</tr>
+<tr>
+<td>01011111</td>
+<td>lrg_d</td>
+</tr>
+<tr>
+<td>01100000</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>01100001</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>01100010</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>01100011</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>01100100</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>01100101</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>01100110</td>
+<td>pre_d</td>
+</tr>
+<tr>
+<td>01100111</td>
+<td>lrg_d</td>
+</tr>
+<tr>
+<td>01101000</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>01101001</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>01101010</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>01101011</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>01101100</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>01101101</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>01101110</td>
+<td>pre_d</td>
+</tr>
+<tr>
+<td>01101111</td>
+<td>lrg_d</td>
+</tr>
+<tr>
+<td>01110000</td>
+<td>udef</td>
+</tr>
+<tr>
+<td>01110001</td>
+<td>udef</td>
+</tr>
+<tr>
+<td>01110010</td>
+<td>udef</td>
+</tr>
+<tr>
+<td>01110011</td>
+<td>udef</td>
+</tr>
+<tr>
+<td>01110100</td>
+<td>udef</td>
+</tr>
+<tr>
+<td>01110101</td>
+<td>udef</td>
+</tr>
+<tr>
+<td>01110110</td>
+<td>udef</td>
+</tr>
+<tr>
+<td>01110111</td>
+<td>udef</td>
+</tr>
+<tr>
+<td>01111000</td>
+<td>udef</td>
+</tr>
+<tr>
+<td>01111001</td>
+<td>udef</td>
+</tr>
+<tr>
+<td>01111010</td>
+<td>udef</td>
+</tr>
+<tr>
+<td>01111011</td>
+<td>udef</td>
+</tr>
+<tr>
+<td>01111100</td>
+<td>udef</td>
+</tr>
+<tr>
+<td>01111101</td>
+<td>udef</td>
+</tr>
+<tr>
+<td>01111110</td>
+<td>udef</td>
+</tr>
+<tr>
+<td>01111111</td>
+<td>udef</td>
+</tr>
+<tr>
+<td>10000000</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>10000001</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>10000010</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>10000011</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>10000100</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>10000101</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>10000110</td>
+<td>pre_d</td>
+</tr>
+<tr>
+<td>10000111</td>
+<td>lrg_d</td>
+</tr>
+<tr>
+<td>10001000</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>10001001</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>10001010</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>10001011</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>10001100</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>10001101</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>10001110</td>
+<td>pre_d</td>
+</tr>
+<tr>
+<td>10001111</td>
+<td>lrg_d</td>
+</tr>
+<tr>
+<td>10010000</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>10010001</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>10010010</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>10010011</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>10010100</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>10010101</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>10010110</td>
+<td>pre_d</td>
+</tr>
+<tr>
+<td>10010111</td>
+<td>lrg_d</td>
+</tr>
+<tr>
+<td>10011000</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>10011001</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>10011010</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>10011011</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>10011100</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>10011101</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>10011110</td>
+<td>pre_d</td>
+</tr>
+<tr>
+<td>10011111</td>
+<td>lrg_d</td>
+</tr>
+<tr>
+<td>10100000</td>
+<td>med_d</td>
+</tr>
+<tr>
+<td>10100001</td>
+<td>med_d</td>
+</tr>
+<tr>
+<td>10100010</td>
+<td>med_d</td>
+</tr>
+<tr>
+<td>10100011</td>
+<td>med_d</td>
+</tr>
+<tr>
+<td>10100100</td>
+<td>med_d</td>
+</tr>
+<tr>
+<td>10100101</td>
+<td>med_d</td>
+</tr>
+<tr>
+<td>10100110</td>
+<td>med_d</td>
+</tr>
+<tr>
+<td>10100111</td>
+<td>med_d</td>
+</tr>
+<tr>
+<td>10101000</td>
+<td>med_d</td>
+</tr>
+<tr>
+<td>10101001</td>
+<td>med_d</td>
+</tr>
+<tr>
+<td>10101010</td>
+<td>med_d</td>
+</tr>
+<tr>
+<td>10101011</td>
+<td>med_d</td>
+</tr>
+<tr>
+<td>10101100</td>
+<td>med_d</td>
+</tr>
+<tr>
+<td>10101101</td>
+<td>med_d</td>
+</tr>
+<tr>
+<td>10101110</td>
+<td>med_d</td>
+</tr>
+<tr>
+<td>10101111</td>
+<td>med_d</td>
+</tr>
+<tr>
+<td>10110000</td>
+<td>med_d</td>
+</tr>
+<tr>
+<td>10110001</td>
+<td>med_d</td>
+</tr>
+<tr>
+<td>10110010</td>
+<td>med_d</td>
+</tr>
+<tr>
+<td>10110011</td>
+<td>med_d</td>
+</tr>
+<tr>
+<td>10110100</td>
+<td>med_d</td>
+</tr>
+<tr>
+<td>10110101</td>
+<td>med_d</td>
+</tr>
+<tr>
+<td>10110110</td>
+<td>med_d</td>
+</tr>
+<tr>
+<td>10110111</td>
+<td>med_d</td>
+</tr>
+<tr>
+<td>10111000</td>
+<td>med_d</td>
+</tr>
+<tr>
+<td>10111001</td>
+<td>med_d</td>
+</tr>
+<tr>
+<td>10111010</td>
+<td>med_d</td>
+</tr>
+<tr>
+<td>10111011</td>
+<td>med_d</td>
+</tr>
+<tr>
+<td>10111100</td>
+<td>med_d</td>
+</tr>
+<tr>
+<td>10111101</td>
+<td>med_d</td>
+</tr>
+<tr>
+<td>10111110</td>
+<td>med_d</td>
+</tr>
+<tr>
+<td>10111111</td>
+<td>med_d</td>
+</tr>
+<tr>
+<td>11000000</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>11000001</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>11000010</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>11000011</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>11000100</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>11000101</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>11000110</td>
+<td>pre_d</td>
+</tr>
+<tr>
+<td>11000111</td>
+<td>lrg_d</td>
+</tr>
+<tr>
+<td>11001000</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>11001001</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>11001010</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>11001011</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>11001100</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>11001101</td>
+<td>sml_d</td>
+</tr>
+<tr>
+<td>11001110</td>
+<td>pre_d</td>
+</tr>
+<tr>
+<td>11001111</td>
+<td>lrg_d</td>
+</tr>
+<tr>
+<td>11010000</td>
+<td>udef</td>
+</tr>
+<tr>
+<td>11010001</td>
+<td>udef</td>
+</tr>
+<tr>
+<td>11010010</td>
+<td>udef</td>
+</tr>
+<tr>
+<td>11010011</td>
+<td>udef</td>
+</tr>
+<tr>
+<td>11010100</td>
+<td>udef</td>
+</tr>
+<tr>
+<td>11010101</td>
+<td>udef</td>
+</tr>
+<tr>
+<td>11010110</td>
+<td>udef</td>
+</tr>
+<tr>
+<td>11010111</td>
+<td>udef</td>
+</tr>
+<tr>
+<td>11011000</td>
+<td>udef</td>
+</tr>
+<tr>
+<td>11011001</td>
+<td>udef</td>
+</tr>
+<tr>
+<td>11011010</td>
+<td>udef</td>
+</tr>
+<tr>
+<td>11011011</td>
+<td>udef</td>
+</tr>
+<tr>
+<td>11011100</td>
+<td>udef</td>
+</tr>
+<tr>
+<td>11011101</td>
+<td>udef</td>
+</tr>
+<tr>
+<td>11011110</td>
+<td>udef</td>
+</tr>
+<tr>
+<td>11011111</td>
+<td>udef</td>
+</tr>
+<tr>
+<td>11100000</td>
+<td>lrg_l</td>
+</tr>
+<tr>
+<td>11100001</td>
+<td>sml_l</td>
+</tr>
+<tr>
+<td>11100010</td>
+<td>sml_l</td>
+</tr>
+<tr>
+<td>11100011</td>
+<td>sml_l</td>
+</tr>
+<tr>
+<td>11100100</td>
+<td>sml_l</td>
+</tr>
+<tr>
+<td>11100101</td>
+<td>sml_l</td>
+</tr>
+<tr>
+<td>11100110</td>
+<td>sml_l</td>
+</tr>
+<tr>
+<td>11100111</td>
+<td>sml_l</td>
+</tr>
+<tr>
+<td>11101000</td>
+<td>sml_l</td>
+</tr>
+<tr>
+<td>11101001</td>
+<td>sml_l</td>
+</tr>
+<tr>
+<td>11101010</td>
+<td>sml_l</td>
+</tr>
+<tr>
+<td>11101011</td>
+<td>sml_l</td>
+</tr>
+<tr>
+<td>11101100</td>
+<td>sml_l</td>
+</tr>
+<tr>
+<td>11101101</td>
+<td>sml_l</td>
+</tr>
+<tr>
+<td>11101110</td>
+<td>sml_l</td>
+</tr>
+<tr>
+<td>11101111</td>
+<td>sml_l</td>
+</tr>
+<tr>
+<td>11110000</td>
+<td>lrg_m</td>
+</tr>
+<tr>
+<td>11110001</td>
+<td>sml_m</td>
+</tr>
+<tr>
+<td>11110010</td>
+<td>sml_m</td>
+</tr>
+<tr>
+<td>11110011</td>
+<td>sml_m</td>
+</tr>
+<tr>
+<td>11110100</td>
+<td>sml_m</td>
+</tr>
+<tr>
+<td>11110101</td>
+<td>sml_m</td>
+</tr>
+<tr>
+<td>11110110</td>
+<td>sml_m</td>
+</tr>
+<tr>
+<td>11110111</td>
+<td>sml_m</td>
+</tr>
+<tr>
+<td>11111000</td>
+<td>sml_m</td>
+</tr>
+<tr>
+<td>11111001</td>
+<td>sml_m</td>
+</tr>
+<tr>
+<td>11111010</td>
+<td>sml_m</td>
+</tr>
+<tr>
+<td>11111011</td>
+<td>sml_m</td>
+</tr>
+<tr>
+<td>11111100</td>
+<td>sml_m</td>
+</tr>
+<tr>
+<td>11111101</td>
+<td>sml_m</td>
+</tr>
+<tr>
+<td>11111110</td>
+<td>sml_m</td>
+</tr>
+<tr>
+<td>11111111</td>
+<td>sml_m</td>
+</tr>
+</tbody>
+</table>
+    </div>
+    
+
+            <br class="mb-4">
+        </div>
+    </div>
+</div>
+
+
+
+
+<nav id="footer" class="navbar navbar-expand-lg navbar-light fixed-bottom">
+    <div class="container">
+        <div class="" style="horiz-align: left;">Powered by <a target="_blank" href="http://imagelab.ing.unimore.it/">
+            <img src="LZVN%20decoder_files/aimagelab.png" height="25" alt="AImageLab"></a>
+        </div>
+        <div class="" style="float: right !important;">
+            Designed and Managed by <a href="http://federicobolelli.it/" target="_blank">F. Bolelli</a>, S. Allegretti
+            and C. Grana
+        </div>
+    </div>
+</nav>
+<!-- Footer -->
+<style>
+    #footer {
+        font-size: large;
+        background-color: #ECECEC;
+    
+    }
+
+    .container {
+        max-width: 98%;
+    }
+
+    .custom-button {
+        width: 200px !important;
+        height: 200px !important;
+        margin-right: 20px !important;
+    }
+
+    .btn-group-xs > .btn, .btn-xs {
+        padding: .25rem .4rem;
+        font-size: .875rem;
+        line-height: .5;
+        border-radius: .2rem;
+    }
+
+    /* Overrides list-group-item from Bootstrap */
+    .list-group-item {
+        background-color: transparent;
+        padding: 3px 13px
+    }
+
+    /* Overrides list-group-item from Bootstrap */
+    .teacher_block {
+     background-color: #ffffff;
+    }
+
+    a:hover {
+        text-decoration: none;
+    }
+
+    .mycontent-left {
+        border-right: 1px dashed #333;
+    }
+
+    pre {
+        white-space: pre-wrap;
+        word-wrap: break-word;
+    }
+
+    /* Overrides default Editor.md code style */
+    .editormd-preview-container code, .editormd-html-preview code {
+        background-color: transparent;
+        border: none;
+        margin: 0;
+        padding: 0;
+        color: #A31515;
+        border-radius: 0;
+        box-sizing: content-box;
+    }
+
+    .editormd-preview-container p code, .editormd-html-preview p code {
+        margin: 0;
+    }
+
+    .editormd-preview-container code::before, .editormd-html-preview code::before {
+        content: "";
+    }
+
+    .editormd-preview-container code::after, .editormd-html-preview code::after {
+        content: "";
+    }
+
+    /* Reduce font size in Editor.md formulas */
+    .editormd-preview-container .katex, .editormd-html-preview .katex {
+        font-size: 1.2em !important;
+    }
+</style>
+
+<script type="text/javascript">
+    $('#language-list a').on('click', function (event) {
+        event.preventDefault();
+        var target = $(event.target);
+        var url = target.attr('href');
+        var language_code = target.data('language-code');
+        $.ajax({
+            type: 'POST',
+            url: url,
+            data: {language: language_code},
+            headers: {"X-CSRFToken": getCookie('csrftoken')}
+        }).done(function (data, textStatus, jqXHR) {
+            window.location.reload(true);
+        });
+    });
+</script>
+</body><!-- Footer --></html>
