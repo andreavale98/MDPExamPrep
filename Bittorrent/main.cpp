@@ -82,7 +82,7 @@ class Bencode {
 public:
 	bool read(std::ifstream& is) {
 		// dovrei leggere un solo elemento, funzione ricorsiva.
-			char type = is.peek(); // guardo il primo carattere (senza leggerlo in caso di stringhe perchè mi serve tutto il numero)
+			char type = is.peek(); // guardo il primo carattere (senza leggerlo in caso di stringhe perchÃ¨ mi serve tutto il numero)
 			if (isdigit(type))
 				type = '1'; // uso '1' per intercettare tutte le stringhe
 			switch (type)
@@ -111,7 +111,7 @@ public:
 };
 
 int main() {
-	std::ifstream is("KickAss.torrent");
+	std::ifstream is("KickAss.torrent", std::ios::binary);
 	Bencode b;
 	b.read(is);
 }
